@@ -1,0 +1,36 @@
+.breadcrumb {
+    // @extend .alignfull;
+    margin-top: $spacer * 3;
+    margin-bottom: 0;
+
+    // .breadcrumb-inner {
+    //     @include make-container();
+    //     @include make-container-max-widths();
+    // }
+
+    // p {
+    //     margin-bottom: 0;
+    // }
+
+    .home {
+        padding-left: 2rem;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 1.5rem;
+            height: 1.5rem;
+            transform: translateY(-60%);
+            background-image: url('../img/home.svg');
+            background-repeat: no-repeat;
+        }
+    }
+
+    .current-item {
+        font-weight: $font-weight-bold;
+    }
+
+}

@@ -1,0 +1,40 @@
+.hfeed {
+
+    article {
+        margin-bottom: $spacer * 3;
+
+		.wp-post-image {
+			margin-bottom: $spacer;
+		}
+    }
+}
+
+.post-navigation {
+	margin-top: $spacer * 2;
+
+	.nav-links {
+		font-weight: $font-weight-bold;
+	}
+
+}
+
+.archive {
+
+	.wp-block-cover.is-style-image-header {
+		min-height: 300px;
+
+		+ .container > .image-header-archive {
+			position: relative;
+			margin-top: -90px;
+			z-index: 2;
+		}
+
+	}
+
+}
+
+.image-header-archive {
+	height: 180px;
+	object-fit: cover;
+}
+

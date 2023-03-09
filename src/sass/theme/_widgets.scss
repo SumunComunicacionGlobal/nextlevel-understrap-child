@@ -1,0 +1,23 @@
+.widget-area {
+
+	.widget {
+        margin-bottom: $spacer * 2;
+	}
+}
+
+.footer-widget {
+    margin-bottom: $spacer;
+}
+
+#wrapper-footer {
+
+	.footer-widget,
+	.footer-widget p {
+		margin-bottom: 0;
+	}
+}
+
+.widget-title {
+	text-transform: uppercase;
+	font-weight: $font-weight-bold;
+}

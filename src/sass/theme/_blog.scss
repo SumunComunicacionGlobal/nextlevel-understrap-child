@@ -1,0 +1,7 @@
+.hfeed article.type-post {
+
+    .wp-post-image:not(.wp-block-cover__image-background) {
+        height: 290px;
+        object-fit: cover;
+    }
+}

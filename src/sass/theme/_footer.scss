@@ -1,0 +1,23 @@
+#wrapper-footer-full,
+#wrapper-footer {
+	background-color: $secondary;
+	color: $white;
+
+	a:not(.btn) {
+		color: $white;
+	}
+}
+
+#wrapper-footer-full {
+	padding-top: $spacer * 4;
+}
+
+#wrapper-footer {
+	padding: $spacer 0;
+	font-size: $font-size-sm;
+
+	@include media-breakpoint-down(sm) {
+		text-align: center;
+	}
+
+}
