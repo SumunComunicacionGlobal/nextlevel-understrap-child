@@ -4,7 +4,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<p class="h4 mt-3"><?php echo __( 'Selector de cursos', 'smn' ); ?></p>
+<p class="h4"><?php echo __( 'Selector de cursos', 'smn' ); ?></p>
 
 <nav class="filter-navbar navbar navbar-expand-lg justify-content-center navbar-light mb-2 p-0">
 

@@ -41,7 +41,7 @@ if ( $terms ) { ?>
 
 				<div class="card-body">
 
-					<p class="h4 card-title"><?php echo $term->name; ?></p>
+					<h3 class="h4 card-title"><?php echo $term->name; ?></h3>
 
 					<?php echo wpautop( wp_trim_words( $term->description, 20, false ) . '…' ); ?>
 
