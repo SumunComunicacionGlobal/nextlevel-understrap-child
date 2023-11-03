@@ -3826,8 +3826,8 @@ input[type=button].btn-block {
     position: absolute;
   }
   .navbar-expand-sm .navbar-nav .nav-link {
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
   }
   .navbar-expand-sm > .container,
 .navbar-expand-sm > .container-fluid,
@@ -3871,8 +3871,8 @@ input[type=button].btn-block {
     position: absolute;
   }
   .navbar-expand-md .navbar-nav .nav-link {
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
   }
   .navbar-expand-md > .container,
 .navbar-expand-md > .container-fluid,
@@ -3916,8 +3916,8 @@ input[type=button].btn-block {
     position: absolute;
   }
   .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
   }
   .navbar-expand-lg > .container,
 .navbar-expand-lg > .container-fluid,
@@ -3961,8 +3961,8 @@ input[type=button].btn-block {
     position: absolute;
   }
   .navbar-expand-xl .navbar-nav .nav-link {
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
   }
   .navbar-expand-xl > .container,
 .navbar-expand-xl > .container-fluid,
@@ -4003,8 +4003,8 @@ input[type=button].btn-block {
   position: absolute;
 }
 .navbar-expand .navbar-nav .nav-link {
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
 }
 .navbar-expand > .container,
 .navbar-expand > .container-fluid,
@@ -8898,6 +8898,23 @@ body.understrap-no-sidebar .alignwide {
 .wp-block-media-text .wp-block-media-text__content {
   padding-top: 64px;
   padding-bottom: 64px;
+}
+
+.slide-read-more {
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.slide-read-more-buttons-wrapper {
+  text-align: right;
+}
+
+.slide-read-more-button {
+  cursor: pointer;
+  text-align: right;
+  display: inline-block;
+  margin-top: 1rem;
+  display: none;
 }
 
 .wp-block-table th, .wp-block-table td {

@@ -8,8 +8,17 @@ $args = false;
 
 if ( is_singular() ) {
 	$posts_ids = get_post_meta( get_the_ID(), 'related_posts', true );
+	if (!is_array($posts_ids)) {
+		$posts_ids = explode(',', $posts_ids);
+	}
+	if (($key = array_search( get_the_ID(), $posts_ids)) !== false) {
+		unset($posts_ids[$key]);
+	}
 } elseif( is_tax() ) {
 	$posts_ids = get_term_meta( get_queried_object_id(), 'related_posts', true );
+	if (!is_array($posts_ids)) {
+		$posts_ids = explode(',', $posts_ids);
+	}
 }
 
 if ( $posts_ids ) {

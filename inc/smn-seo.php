@@ -3,6 +3,17 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+add_filter( 'rank_math/frontend/robots', function( $robots ) {
+
+    if ( !is_singular( 'formacion' ) ) return $robots;
+
+    if ( has_term( 29, 'modalidad' ) ) {
+	    $robots["index"] = 'noindex';
+        $robots["follow"] = 'nofollow';
+	}
+
+	return $robots;
+});
 
 function smn_get_attachment_alt( $attachment_ID ) {
 

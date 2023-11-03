@@ -538,7 +538,7 @@ if ( ! function_exists( 'area_formativa_custom_taxonomy' ) ) {
 			'show_in_nav_menus'          => true,
 			'show_tagcloud'              => false,
 			'rewrite'                    => array(
-												'slug'		=> __( 'cursos/area-formativa', 'smn' ),
+												'slug'		=> __( 'cursos', 'smn' ),
 											),
 			'show_in_rest'               => true,
 			'sort'						 => true,

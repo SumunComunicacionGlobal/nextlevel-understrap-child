@@ -405,3 +405,18 @@ body.understrap-no-sidebar {
         padding-bottom: $grid-gutter-width*2;
     }
 }
+
+.slide-read-more {
+    overflow: hidden;
+    margin-bottom: $spacer * 2;
+}
+.slide-read-more-buttons-wrapper {
+    text-align: right;
+}
+.slide-read-more-button {
+    cursor: pointer;
+    text-align: right;
+    display: inline-block;
+    margin-top: $spacer;
+    display: none;
+}

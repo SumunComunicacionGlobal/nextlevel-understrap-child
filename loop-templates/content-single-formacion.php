@@ -79,6 +79,8 @@ $btn_inscripcion = smn_get_boton_inscripcion_formacion();
 
 						<?php if ( $btn_inscripcion ) {
 							smn_reusable_block( 327 ); 
+						} elseif ( has_term( array( 15, 16 ), 'area-formativa' ) ) {
+							smn_reusable_block( 674 );
 						} else {
 							smn_reusable_block( 238 ); 
 						} ?>

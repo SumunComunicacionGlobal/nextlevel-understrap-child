@@ -99,8 +99,10 @@ $post_type = get_post_type();
 
 			</main><!-- #main -->
 
-			<?php
-			if ( 'formacion' == get_post_type() ) {
+			<?php			
+			
+			// if ( 'formacion' == get_post_type() ) {
+			if ( $_GET ) {
 				echo facetwp_display( 'facet', 'paginacion' ); 
 			} else {
 				// Display the pagination component.

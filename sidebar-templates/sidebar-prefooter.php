@@ -5,14 +5,16 @@ defined( 'ABSPATH' ) || exit;
 
 $container = get_theme_mod( 'understrap_container_type' );
 $ocultar_prefooter = false;
+$ocultar_prefooter_orientacion = false;
 
 if ( is_singular() ) {
 	$ocultar_prefooter = get_post_meta( get_the_ID(), 'ocultar_prefooter', true );
+	$ocultar_prefooter_orientacion = get_post_meta( get_the_ID(), 'ocultar_prefooter_orientacion', true );
 }
 
-if ( $ocultar_prefooter ) return false;
+// if ( $ocultar_prefooter ) return false;
 
-if( !is_single() && is_active_sidebar( 'prefooter-orientacion' ) ) : ?>
+if( !$ocultar_prefooter_orientacion && !is_single() && is_active_sidebar( 'prefooter-orientacion' ) ) : ?>
 
 	<div id="wrapper-prefooter-orientacion">
 

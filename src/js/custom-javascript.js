@@ -46,6 +46,47 @@ jQuery(document).ready(function($) {
 
 });
 
+jQuery(function ($) {
+
+  var minimumHeight = 400; // max height in pixels
+  // resize the slide-read-more Div
+
+  $(".single-formacion .entry-content .wp-block-list").each( function() {
+    var box = $(this);
+    var initialHeight = box.innerHeight();
+    // reduce the text if it's longer than 200px
+    if (initialHeight > minimumHeight) {
+      box.after('<div class="slide-read-more-buttons-wrapper"><span class="btn btn btn-outline-primary slide-read-more-button read-more-button">Ver más</span><span class="slide-read-more-button btn btn btn-outline-primary">Ver menos</span></div>')
+      box.css('height', minimumHeight);
+      $(".read-more-button").show();
+      box.addClass('slide-read-more');
+    }
+
+    SliderReadMore();
+
+  })
+
+  function SliderReadMore() {
+     $(".slide-read-more-button").on('click', function () {
+
+        var box = $(this).parent().prev('.slide-read-more');
+        // get current height
+        var currentHeight = box.innerHeight();
+
+        // get height with auto applied
+        var autoHeight = box.css('height', 'auto').innerHeight();
+
+        // reset height and revert to original if current and auto are equal
+        var newHeight = (currentHeight | 0) === (autoHeight | 0) ? minimumHeight : autoHeight;
+
+        box.css('height', currentHeight).animate({
+           height: (newHeight)
+        })
+
+        box.next().children('.slide-read-more-button').toggle();
+     });
+  }
+});
 
 /* Carruseles */
 
