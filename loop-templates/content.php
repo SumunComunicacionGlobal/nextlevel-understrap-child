@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php
 		the_title(
-			sprintf( '<p class="entry-title h4"><a class="stretched-link" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+			sprintf( '<p class="entry-title h4 mb-2"><a class="stretched-link" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
 			'</a></p>'
 		);
 		?>
@@ -35,15 +35,23 @@ defined( 'ABSPATH' ) || exit;
 	<div class="entry-content">
 
 		<?php
-		the_excerpt();
-		understrap_link_pages();
+			// Mostrar el extracto en todas las páginas excepto en la homepage/frontpage
+			if ( !is_front_page() ) {
+				the_excerpt();
+				understrap_link_pages(); // Esto también se ejecutará en todas las páginas excepto en la homepage
+			}
+
+			// Mostrar el botón "Leer más" solo en la homepage/frontpage
+			if ( is_front_page() ) {
+				echo '<a class="btn btn-success understrap-read-more-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">Leer más…</a>';
+			}
 		?>
 
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
 
-		<?php understrap_entry_footer(); ?>
+		<?php //understrap_entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->
 

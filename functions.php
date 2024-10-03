@@ -18,6 +18,7 @@ $understrap_includes = array(
     '/smn-template-tags.php',
     '/smn-shortcodes.php',
     '/smn-blocks.php',
+    '/smn-structured-data.php',
 );
 
 // Load WooCommerce functions if WooCommerce is activated.

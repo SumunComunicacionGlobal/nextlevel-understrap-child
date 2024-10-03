@@ -20,8 +20,9 @@ defined( 'ABSPATH' ) || exit;
 				echo facetwp_display( 'facet', 'buscador' ); 
 				if ( !is_tax() ) echo facetwp_display( 'facet', 'categorias_cursos' ); 
 				echo facetwp_display( 'facet', 'target' ); 
-				echo facetwp_display( 'facet', 'ciudad' ); 
-				// echo facetwp_display( 'facet', 'tipo' ); 
+				echo facetwp_display( 'facet', 'ciudad' );
+				echo facetwp_display( 'facet', 'entidad' );
+				echo facetwp_display( 'facet', 'tematica' ); 
 				echo facetwp_display( 'facet', 'modalidad' ); 
 			?>
 
